@@ -43,7 +43,7 @@ export default function TopicDetail() {
       <div className="divider" />
       <section className="comments-section">
         <h3>讨论</h3>
-        <Giscus />
+        <Giscus term={`topic:${topic.id}`} />
       </section>
     </div>
   )

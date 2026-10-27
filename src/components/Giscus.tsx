@@ -1,18 +1,37 @@
-export default function Giscus() {
-  return (
-    <div className="giscus-wrapper">
-      <div style={{ 
-        padding: '40px 20px', 
-        textAlign: 'center', 
-        color: 'var(--text-secondary)',
-        border: '1px solid var(--border)',
-        borderRadius: '8px'
-      }}>
-        <div>Giscus 评论区</div>
-        <div style={{ fontSize: '12px', marginTop: '8px' }}>
-          配置后将使用 GitHub Discussions
-        </div>
-      </div>
-    </div>
-  )
+import { useEffect, useRef } from 'react'
+
+type GiscusProps = {
+  term: string
+}
+
+export default function Giscus({ term }: GiscusProps) {
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
+    const script = document.createElement('script')
+    script.src = 'https://giscus.app/client.js'
+    script.async = true
+    script.crossOrigin = 'anonymous'
+    script.dataset.repo = 'shtao-tonhe/community'
+    script.dataset.repoId = 'R_kgDOVY-gzA'
+    script.dataset.category = 'Announcements'
+    script.dataset.categoryId = 'DIC_kwDOVY-gzM4DJuxU'
+    script.dataset.mapping = 'specific'
+    script.dataset.term = term
+    script.dataset.strict = '0'
+    script.dataset.reactionsEnabled = '1'
+    script.dataset.emitMetadata = '0'
+    script.dataset.inputPosition = 'bottom'
+    script.dataset.theme = 'preferred_color_scheme'
+    script.dataset.lang = 'zh-CN'
+
+    container.replaceChildren(script)
+
+    return () => container.replaceChildren()
+  }, [term])
+
+  return <div className="giscus-wrapper" ref={containerRef} />
 }

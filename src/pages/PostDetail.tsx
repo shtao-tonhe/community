@@ -93,7 +93,7 @@ export default function PostDetail({ postId, onBack }: { postId?: string; onBack
         <div className="divider" />
         <section className="comments-section">
           <h3>评论</h3>
-          <Giscus />
+          <Giscus term={`post:${post.id}`} />
         </section>
       </main>
     </div>
