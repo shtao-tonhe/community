@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Giscus from '../components/Giscus'
 import './TopicDetail.css'
+import { dataUrl } from '../dataUrl'
 
 type Topic = {
   id: string
@@ -15,7 +16,7 @@ export default function TopicDetail() {
 
   useEffect(() => {
     if (!id) return
-    fetch(`./data/topics/${id}.json`)
+    fetch(dataUrl(`topics/${id}.json`))
       .then((res) => res.json())
       .then(setTopic)
       .catch(() => setTopic(null))

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import TopicsSidebar from '../components/TopicsSidebar'
 import PostDetail from './PostDetail'
+import { dataUrl } from '../dataUrl'
 import './Home.css'
 
 type Post = {
@@ -27,12 +28,12 @@ export default function Home() {
   const topicId = searchParams.get('topic')
 
   useEffect(() => {
-    fetch('./data/posts/index.json')
+    fetch(dataUrl('posts/index.json'))
       .then((res) => res.json())
       .then(setPosts)
       .catch(() => setPosts([]))
 
-    fetch('./data/topics/index.json')
+    fetch(dataUrl('topics/index.json'))
       .then((res) => res.json())
       .then(setTopics)
       .catch(() => setTopics([]))

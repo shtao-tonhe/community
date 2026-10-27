@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import Giscus from '../components/Giscus'
 import TopicsSidebar from '../components/TopicsSidebar'
 import './PostDetail.css'
+import { dataUrl } from '../dataUrl'
 
 type Post = {
   id: string
@@ -27,7 +28,7 @@ export default function PostDetail({ postId, onBack }: { postId?: string; onBack
   const [selectedTopicId, setSelectedTopicId] = useState<string | null>(null)
 
   useEffect(() => {
-    fetch('./data/topics/index.json')
+    fetch(dataUrl('topics/index.json'))
       .then((res) => res.json())
       .then(setTopics)
       .catch(() => setTopics([]))
@@ -35,7 +36,7 @@ export default function PostDetail({ postId, onBack }: { postId?: string; onBack
 
   useEffect(() => {
     if (!id) return
-    fetch(`./data/posts/${id}.json`)
+    fetch(dataUrl(`posts/${id}.json`))
       .then((res) => res.json())
       .then(setPost)
       .catch(() => setPost(null))

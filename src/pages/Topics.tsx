@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Topics.css'
+import { dataUrl } from '../dataUrl'
 
 type Topic = {
   id: string
@@ -13,7 +14,7 @@ export default function Topics() {
   const [topics, setTopics] = useState<Topic[]>([])
 
   useEffect(() => {
-    fetch('./data/topics/index.json')
+    fetch(dataUrl('topics/index.json'))
       .then((res) => res.json())
       .then(setTopics)
       .catch(() => setTopics([]))

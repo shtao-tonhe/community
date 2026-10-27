@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { dataUrl } from '../dataUrl'
 import '../pages/Home.css'
 
 type Topic = {
@@ -13,7 +14,7 @@ export default function TopicsSidebar({ onTopicSelect }: { onTopicSelect?: (topi
   const [, setSearchParams] = useSearchParams()
 
   useEffect(() => {
-    fetch('./data/topics/index.json')
+    fetch(dataUrl('topics/index.json'))
       .then((res) => res.json())
       .then(setTopics)
       .catch(() => setTopics([]))
