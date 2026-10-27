@@ -1,0 +1,8 @@
+{
+  "id": "react-hooks-tips",
+  "title": "React Hooks 实用技巧",
+  "author": "前端小助手",
+  "handle": "@frontend_helper",
+  "time": "2小时前",
+  "content": "React Hooks 自发布以来已经成为主流开发方式。\n\n本文分享一些实用技巧：\n\n1. 合理使用 useCallback 和 useMemo\n2. 自定义 Hook 抽离逻辑\n3. useEffect 的依赖管理\n4. 避免不必要的重渲染\n\n希望对大家有所帮助。"
+}

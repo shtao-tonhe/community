@@ -1,0 +1,58 @@
+.topics-page {
+  width: 100%;
+}
+
+.page-header {
+  padding: 16px 24px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+}
+
+.topics-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 20px 24px;
+}
+
+.topic-list-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.topic-list-card:hover {
+  background: var(--hover);
+}
+
+.topic-list-cover {
+  height: 140px;
+  background: linear-gradient(135deg, #1f2328 0%, #2a2f35 100%);
+}
+
+.topic-list-info {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.topic-list-title {
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--text-primary);
+}
+
+.topic-list-desc {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 20px;
+}

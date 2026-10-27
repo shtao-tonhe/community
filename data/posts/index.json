@@ -1,0 +1,42 @@
+[
+  {
+    "id": "first-post",
+    "title": "欢迎来到社区",
+    "author": "Admin",
+    "handle": "@admin",
+    "time": "1天前",
+    "excerpt": "这是第一个帖子，用于测试帖子流展示。"
+  },
+  {
+    "id": "react-hooks-tips",
+    "title": "React Hooks 实用技巧",
+    "author": "前端小助手",
+    "handle": "@frontend_helper",
+    "time": "2小时前",
+    "excerpt": "分享一些日常开发中常用的 React Hooks 用法和避坑指南。"
+  },
+  {
+    "id": "read-recommend",
+    "title": "最近读过的几本好书推荐",
+    "author": "书虫",
+    "handle": "@bookworm",
+    "time": "5小时前",
+    "excerpt": "推荐几本值得反复阅读的书，涵盖技术、人文和历史领域。"
+  },
+  {
+    "id": "tech-interview",
+    "title": "技术面试准备经验总结",
+    "author": "求职者",
+    "handle": "@jobseeker",
+    "time": "昨天",
+    "excerpt": "从简历、算法、项目到八股文，整理一份实用的面试准备清单。"
+  },
+  {
+    "id": "chat-weekend",
+    "title": "周末有啥好玩的推荐吗？",
+    "author": "随缘",
+    "handle": "@casual",
+    "time": "昨天",
+    "excerpt": "周末想找点消遣，欢迎推荐电影、游戏、吃的、玩的都可以。"
+  }
+]

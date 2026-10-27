@@ -1,0 +1,11 @@
+.app {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.main {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+}

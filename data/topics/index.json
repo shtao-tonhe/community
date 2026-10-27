@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tech",
+    "name": "#技术交流",
+    "description": "技术相关讨论，交流编程、架构、工具等话题"
+  },
+  {
+    "id": "chat",
+    "name": "#日常闲聊",
+    "description": "日常交流，分享生活点滴"
+  },
+  {
+    "id": "read",
+    "name": "#读书分享",
+    "description": "好书推荐、读书感悟交流"
+  },
+  {
+    "id": "job",
+    "name": "#求职经验",
+    "description": "求职面试、简历优化、经验分享"
+  }
+]

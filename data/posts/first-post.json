@@ -1,0 +1,8 @@
+{
+  "id": "first-post",
+  "title": "欢迎来到社区",
+  "author": "Admin",
+  "handle": "@admin",
+  "time": "1天前",
+  "content": "欢迎来到社区！\n\n这里是帖子详情页，评论部分将通过 Giscus 嵌入 GitHub Discussions。"
+}
